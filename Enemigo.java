@@ -8,12 +8,12 @@ public class Enemigo {
         this.ataque=ataque;
     }
     public void atacar() {
-        System.out.println("El enemigo ("+tipo+") ataca ocasionado"+ataque+" de daño.");
+        System.out.println("El enemigo ("+tipo+") ataca ocasionando"+ataque+" de daño.");
     }
     public void recibirDanio(int cantidad) {
         salud -=cantidad;
         if (salud<0) salud=0;
-        System.out.println("El enemigo ("+tipo+") recibió "+cantidad+" de daño. Salud restante: "+salud);}
+        System.out.println("El enemigo ("+tipo+") recibió "+cantidad+" de daño. Salud: "+salud);}
     public boolean estaVivo() {
         return salud > 0;}
     public void mostrarEstado() {
