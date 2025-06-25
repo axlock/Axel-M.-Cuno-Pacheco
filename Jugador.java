@@ -10,23 +10,14 @@ public class Jugador {
         this.puntaje = 0;
     }
     public void atacar() {
-        System.out.println(nombre + " realiza un ataque de " + ataque + " puntos.");
+        System.out.println(nombre+" provoco "+ataque+" daño");
     }
     public void recibirDanio(int cantidad) {
         salud -= cantidad;
         if (salud < 0) salud = 0;
-        System.out.println(nombre + " recibió " + cantidad + " de daño. Salud restante: " + salud);}
+        System.out.println(nombre + " recibió " + cantidad + " de daño.);}
     public boolean estaVivo() {
         return salud > 0;}
-    public void usarMejora(Mejora m) {
-        if (m.getTipo().equalsIgnoreCase("vida")) {
-            salud += m.getValor();
-            System.out.println(nombre + " usó mejora de vida. Salud aumentó a: " + salud);
-        } else if (m.getTipo().equalsIgnoreCase("ataque")) {
-            ataque += m.getValor();
-            System.out.println(nombre + " usó mejora de ataque. Ataque aumentó a: " + ataque);
-        }
-    }
     public String getNombre() {
         return nombre;}
     public int getSalud() {
